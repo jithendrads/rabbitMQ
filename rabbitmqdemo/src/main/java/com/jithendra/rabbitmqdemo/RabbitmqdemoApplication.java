@@ -20,7 +20,7 @@ public class RabbitmqdemoApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		SimpleMessage simpleMessage=new SimpleMessage("FirstMessage","Simple description");
-		rabbitTemplate.convertAndSend("TestExchange","testRouting",simpleMessage);
+		rabbitTemplate.convertAndSend("MyTopicExchange","topic",simpleMessage);
 		
 	}
 
